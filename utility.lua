@@ -286,8 +286,7 @@ local traprush=nil
 local regeff=Card.RegisterEffect
 function Card.RegisterEffect(c,e,forced,...)
 	if not traprush then
-		traprush=Effect.CreateEffect(c)
-		traprush:SetDescription(aux.Stringid(id,2))
+		traprush=Effect.GlobalEffect()
 		traprush:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_CONTINUOUS)
 		traprush:SetCode(EVENT_CHAINING)
 		traprush:SetCondition(function() return Duel.IsDuelType(DUEL_INVERTED_QUICK_PRIORITY) end)
