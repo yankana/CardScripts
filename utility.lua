@@ -282,8 +282,23 @@ function Auxiliary.GetMustBeMaterialGroup(tp,eg,sump,sc,g,r)
 end
 
 --for additional registers
+local traprush=nil
 local regeff=Card.RegisterEffect
 function Card.RegisterEffect(c,e,forced,...)
+	if not traprush then
+		traprush=Effect.CreateEffect(c)
+		traprush:SetDescription(aux.Stringid(id,2))
+		traprush:SetType(EFFECT_TYPE_FIELD+EFFECT_TYPE_CONTINUOUS)
+		traprush:SetCode(EVENT_CHAINING)
+		traprush:SetCondition(function() return Duel.IsDuelType(DUEL_INVERTED_QUICK_PRIORITY) end)
+		traprush:SetOperation(function(e,tp,eg,ep,ev,re,r,rp)
+							local rc=re:GetHandler()
+							if re:IsHasType(EFFECT_TYPE_ACTIVATE) and re:IsActiveType(TYPE_TRAP) then
+								Duel.SetChainLimit(aux.FALSE)
+							end
+						end)
+		Duel.RegisterEffect(traprush,0)
+	end
 	if c:IsStatus(STATUS_INITIALIZING) and not e then Debug.Message("missing (Effect e) in c"..c:GetOriginalCode()..".lua") return end
 	--1 == 511002571 - access to effects that activate that detach an Xyz Material as cost
 	--2 == 511001692 - access to Cardian Summoning conditions/effects
