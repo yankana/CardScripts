@@ -12,7 +12,7 @@ function s.initial_effect(c)
 	--malefic change
 	local e2=Effect.CreateEffect(c)
 	e2:SetType(EFFECT_TYPE_FIELD)
-	e2:SetCode(id)
+	e2:SetCode(75223115)
 	e2:SetProperty(EFFECT_FLAG_PLAYER_TARGET)
 	e2:SetTargetRange(1,1)
 	e2:SetRange(LOCATION_SZONE)

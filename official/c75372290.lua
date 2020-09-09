@@ -20,7 +20,7 @@ function s.initial_effect(c)
 	c:RegisterEffect(e3)
 	local e4=Effect.CreateEffect(c)
 	e4:SetType(EFFECT_TYPE_SINGLE)
-	e4:SetCode(id)
+	e4:SetCode(75372290)
 	e4:SetCondition(s.dacon)
 	c:RegisterEffect(e4)
 end

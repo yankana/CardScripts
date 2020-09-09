@@ -11,7 +11,7 @@ function s.initial_effect(c)
 	local e2=Effect.CreateEffect(c)
 	e2:SetType(EFFECT_TYPE_SINGLE)
 	e2:SetProperty(EFFECT_FLAG_CANNOT_DISABLE+EFFECT_FLAG_UNCOPYABLE)
-	e2:SetCode(id)
+	e2:SetCode(6205579)
 	c:RegisterEffect(e2)
 	--special summon
 	local params = {nil,Fusion.OnFieldMat,nil,nil,Fusion.ForcedHandler}
