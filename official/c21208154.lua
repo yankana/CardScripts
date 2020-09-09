@@ -31,11 +31,11 @@ function s.initial_effect(c)
 	--atk check
 	local e7=Effect.CreateEffect(c)
 	e7:SetType(EFFECT_TYPE_SINGLE)
-	e7:SetCode(id)
+	e7:SetCode(21208154)
 	c:RegisterEffect(e7)
 end
 function s.filter(c)
-	return c:IsFaceup() and not c:IsHasEffect(id)
+	return c:IsFaceup() and not c:IsHasEffect(21208154)
 end
 function s.adval(e,c)
 	local g=Duel.GetMatchingGroup(s.filter,0,LOCATION_MZONE,LOCATION_MZONE,nil)

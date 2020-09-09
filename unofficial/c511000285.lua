@@ -29,7 +29,6 @@ function s.initial_effect(c)
 	--spsummon
 	local e4=Effect.CreateEffect(c)
 	e4:SetCategory(CATEGORY_SPECIAL_SUMMON)
-	e4:SetCategory(CATEGORY_SPECIAL_SUMMON)
 	e4:SetDescription(aux.Stringid(45894482,0))
 	e4:SetType(EFFECT_TYPE_SINGLE+EFFECT_TYPE_TRIGGER_O)
 	e4:SetProperty(EFFECT_FLAG_EVENT_PLAYER+EFFECT_FLAG_DAMAGE_STEP)

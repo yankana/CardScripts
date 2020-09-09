@@ -23,7 +23,7 @@ function s.initial_effect(c)
 	e3:SetRange(LOCATION_FZONE)
 	e3:SetTargetRange(LOCATION_HAND+LOCATION_GRAVE,0)
 	e3:SetTarget(aux.TargetBoolFunction(Card.IsSetCard,0xbb))
-	e3:SetCode(id)
+	e3:SetCode(34822850)
 	c:RegisterEffect(e3)
 	--cannot be target
 	local e4=Effect.CreateEffect(c)

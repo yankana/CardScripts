@@ -21,7 +21,7 @@ function s.initial_effect(c)
 	local e3=Effect.CreateEffect(c)
 	e3:SetType(EFFECT_TYPE_SINGLE)
 	e3:SetProperty(EFFECT_FLAG_CANNOT_DISABLE+EFFECT_FLAG_UNCOPYABLE)
-	e3:SetCode(id)
+	e3:SetCode(20932152)
 	c:RegisterEffect(e3)
 end
 function s.synlimit(e,c)

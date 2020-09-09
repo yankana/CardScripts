@@ -12,7 +12,7 @@ function s.initial_effect(c)
 	e2:SetType(EFFECT_TYPE_FIELD)
 	e2:SetProperty(EFFECT_FLAG_PLAYER_TARGET)
 	e2:SetTargetRange(1,0)
-	e2:SetCode(id)
+	e2:SetCode(CARD_DARK_SANCTUARY)
 	e2:SetRange(LOCATION_FZONE)
 	c:RegisterEffect(e2)
 	--negate attack
