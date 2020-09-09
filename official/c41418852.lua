@@ -21,7 +21,7 @@ function s.initial_effect(c)
 	--Make detaching cost optional for "Numeron" Xyz Monsters
 	local e3=Effect.CreateEffect(c)
 	e3:SetType(EFFECT_TYPE_FIELD)
-	e3:SetCode(id)
+	e3:SetCode(CARD_NUMERON_NETWORK)
 	e3:SetProperty(EFFECT_FLAG_PLAYER_TARGET)
 	e3:SetRange(LOCATION_FZONE)
 	e3:SetTargetRange(1,0)

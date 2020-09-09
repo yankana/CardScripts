@@ -25,7 +25,7 @@ function s.initial_effect(c)
 	e1:SetOperation(s.drop)
 	c:RegisterEffect(e1)
 	local e2=e1:Clone()
-	e2:SetCode(id)
+	e2:SetCode(4179255)
 	c:RegisterEffect(e2)
 	--destroy
 	local e3=Effect.CreateEffect(c)

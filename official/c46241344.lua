@@ -9,7 +9,7 @@ function s.initial_effect(c)
 	--negate cost
 	local e1=Effect.CreateEffect(c)
 	e1:SetType(EFFECT_TYPE_FIELD)
-	e1:SetCode(id)
+	e1:SetCode(CARD_FIRE_FIST_EAGLE)
 	e1:SetProperty(EFFECT_FLAG_PLAYER_TARGET)
 	e1:SetRange(LOCATION_MZONE)
 	e1:SetTargetRange(1,0)
