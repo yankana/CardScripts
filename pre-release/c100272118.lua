@@ -48,12 +48,9 @@ function s.atkfilter(c)
 	return c:IsRace(RACE_PLANT) and c:IsType(TYPE_LINK) and c:GetLinkedGroup():GetSum(Card.GetAttack)>0
 end
 function s.atkcon(e,tp,eg,ep,ev,re,r,rp)
-	local bc=Duel.GetAttackTarget()
-	if not bc then return false end
 	local tc=Duel.GetAttacker()
-	if not tc:IsControler(tp) then tc,bc=bc,tc end
 	e:SetLabelObject(tc)
-	return tc:IsControler(tp) and s.atkfilter(tc) and not bc:IsControler(tp)
+	return tc:IsControler(tp) and s.atkfilter(tc)
 end
 function s.atkop(e,tp,eg,ep,ev,re,r,rp)
 	local c=e:GetHandler()
